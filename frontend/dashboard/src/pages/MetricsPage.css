@@ -1,0 +1,76 @@
+.metrics-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.chart-card {
+    background-color: #1a1f3a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.chart-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.chart-card h3 {
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.feedback-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-item {
+    background-color: #0f1629;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.summary-item.highlight {
+    border: 2px solid #60a5fa;
+}
+
+.summary-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    color: #60a5fa;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.summary-value.error {
+    color: #ef4444;
+}
+
+.no-data {
+    color: #64748b;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

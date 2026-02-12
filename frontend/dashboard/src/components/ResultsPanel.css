@@ -1,0 +1,119 @@
+.results-panel h3 {
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.loading,
+.placeholder {
+    text-align: center;
+    color: #64748b;
+    padding: 3rem 0;
+}
+
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.gauge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-value {
+    position: absolute;
+    top: 60px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.gauge-label {
+    margin-top: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.verdict-badge {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.verdict-phishing {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.verdict-safe {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+}
+
+.confidence-badge {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.confidence-high {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 2px solid #22c55e;
+}
+
+.confidence-medium {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 2px solid #f59e0b;
+}
+
+.confidence-low {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 2px solid #ef4444;
+}
+
+.scores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.score-item {
+    background-color: #0f1629;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.score-label {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.score-value {
+    color: #60a5fa;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2a3f5f;
+    color: #64748b;
+    font-size: 0.85rem;
+}

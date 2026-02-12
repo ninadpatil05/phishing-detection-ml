@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # Backend API Service
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phishing-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=sqlite:///./data/phishing.db
+      - LOG_LEVEL=info
+      - CORS_ORIGINS=http://localhost:3000,http://localhost
+    volumes:
+      # Persist SQLite database
+      - ./data:/app/data
+      # Persist logs
+      - ./logs:/app/logs
+      # Mount models (read-only)
+      - ./models:/app/models:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - phishing-network
+    restart: unless-stopped
+
+  # Frontend Dashboard Service
+  frontend:
+    build:
+      context: ./frontend/dashboard
+      dockerfile: Dockerfile
+    container_name: phishing-dashboard
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:8000/api/v1
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - phishing-network
+    restart: unless-stopped
+
+networks:
+  phishing-network:
+    driver: bridge
+
+volumes:
+  # Named volumes for persistent data
+  data:
+  logs:

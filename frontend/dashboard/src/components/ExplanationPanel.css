@@ -1,0 +1,131 @@
+.explanation-panel {
+    background-color: #1a1f3a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.explanation-panel h3 {
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.section-title {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.risk-title {
+    color: #ef4444;
+}
+
+.safe-title {
+    color: #22c55e;
+}
+
+.explanation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.factor-list {
+    list-style: none;
+}
+
+.factor-item {
+    background-color: #0f1629;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    border-left: 4px solid;
+}
+
+.risk-factor {
+    border-left-color: #ef4444;
+}
+
+.safe-factor {
+    border-left-color: #22c55e;
+}
+
+.factor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.factor-name {
+    color: #e0e0e0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.factor-impact {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.risk-impact {
+    color: #ef4444;
+}
+
+.safe-impact {
+    color: #22c55e;
+}
+
+.factor-value {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+}
+
+.no-factors {
+    color: #64748b;
+    font-style: italic;
+}
+
+.trigger-words-section {
+    margin: 2rem 0;
+}
+
+.trigger-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.trigger-word {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.explanation-text {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #0f1629;
+    border-radius: 8px;
+    border-left: 4px solid #60a5fa;
+}
+
+.explanation-text p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .explanation-grid {
+        grid-template-columns: 1fr;
+    }
+}

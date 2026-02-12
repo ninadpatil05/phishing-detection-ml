@@ -1,0 +1,7 @@
+{
+  "text_weight": 0.6,
+  "url_weight": 0.4,
+  "threshold": 0.5,
+  "text_classifier_path": "models/text_classifier/v1.0/",
+  "url_classifier_path": "models/url_classifier/v1.0/"
+}
