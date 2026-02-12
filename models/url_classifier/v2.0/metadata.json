@@ -1,0 +1,106 @@
+{
+  "model_name": "xgboost",
+  "n_features": 19,
+  "cv_results": {
+    "xgboost": {
+      "mean_f1": 0.10237374102989497,
+      "std_f1": 0.011395438308996461,
+      "cv_scores": [
+        0.08888888888888889,
+        0.1008249312557287,
+        0.12192902638762511,
+        0.10612991765782251,
+        0.0940959409594096
+      ]
+    },
+    "random_forest": {
+      "mean_f1": 0.0719570930146469,
+      "std_f1": 0.011969338161968691,
+      "cv_scores": [
+        0.0658513640639699,
+        0.08186046511627906,
+        0.08208955223880597,
+        0.07879924953095685,
+        0.05118483412322275
+      ]
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "url_depth",
+      "importance": 0.3241947591304779
+    },
+    {
+      "feature": "has_ip_address",
+      "importance": 0.09825508296489716
+    },
+    {
+      "feature": "ssl_age_indicator",
+      "importance": 0.0854598730802536
+    },
+    {
+      "feature": "url_entropy",
+      "importance": 0.06371323019266129
+    },
+    {
+      "feature": "typosquatting_score",
+      "importance": 0.061111871153116226
+    },
+    {
+      "feature": "num_underscores",
+      "importance": 0.040015388280153275
+    },
+    {
+      "feature": "num_digits",
+      "importance": 0.03803969547152519
+    },
+    {
+      "feature": "num_dots",
+      "importance": 0.03767579793930054
+    },
+    {
+      "feature": "domain_length",
+      "importance": 0.03696068376302719
+    },
+    {
+      "feature": "num_hyphens",
+      "importance": 0.03606796637177467
+    },
+    {
+      "feature": "is_url_shortener",
+      "importance": 0.03455068916082382
+    },
+    {
+      "feature": "num_subdomains",
+      "importance": 0.03231741487979889
+    },
+    {
+      "feature": "num_special_chars",
+      "importance": 0.032181814312934875
+    },
+    {
+      "feature": "url_length",
+      "importance": 0.03209357336163521
+    },
+    {
+      "feature": "has_suspicious_keywords",
+      "importance": 0.023877853527665138
+    },
+    {
+      "feature": "has_https",
+      "importance": 0.023484261706471443
+    },
+    {
+      "feature": "has_port_number",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_url",
+      "importance": 0.0
+    },
+    {
+      "feature": "deep_path_nesting",
+      "importance": 0.0
+    }
+  ]
+}
